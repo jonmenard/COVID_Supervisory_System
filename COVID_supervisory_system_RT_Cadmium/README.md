@@ -18,6 +18,6 @@ This will run the standard Cadmium simulator. Cadmium logs will be generated in 
 
 If you are using a platform other then the Nucleo-STM32F401, you will need to change the COMPILE_TARGET / FLASH_TARGET in the make file.
 
-cd SeeedBot_RT_ARM_MBED/top_model/
+cd COVID_supervisory_system_RT_Cadmium/top_model/
 
 make clean; make embedded; make flash;
