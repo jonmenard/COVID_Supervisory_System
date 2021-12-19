@@ -6,7 +6,7 @@ Run './install.sh' to install dependencies
 
 ### SIMULATE MODELS ### 
 
-cd SeeedBot_RT_ARM_MBED/top_model/
+cd COVID_supervisory_system_RT_Cadmium/top_model/
 
 make clean; make all
 
