@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Models>
+	<Model name="COVID_Supervisory_System" type="coupled" description="a coupled system to supervise a room, prevent spread of covid.">
+		<Files>	
+			<File name="C02SensorController.hpp" type="HPP" location="../atomics/"/>
+			<File name="ledController.hpp" type="HPP" location="../atomics/"/>
+			<File name="occupencyController.hpp" type="HPP" location="../atomics/"/>
+		</Files>
+	</Model>
+	<Model name="C02SensorController" type="atomic" description="Takes in c02 voltage and determins if value is safe">
+		<Inputs>
+			<Port name="C02in" type="int" description="a port for c02 volatge to come in"/>	
+						
+		</Inputs>
+		<Outputs>
+			<Port name="C02safe" type="int" description="a port for sending if c02 is safe out"/>
+		</Outputs>
+	</Model>
+	<Model name="ledController" type="atomic" description="takes in saftey values and turn led on or off if they are safe or unsafe">
+		<Inputs>
+			<Port name="C02in" type="int" description="a port for c02 safety to come in"/>		
+			<Port name="Occupancyin" type="int" description="a port for occupancy saftey to come in"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="StatusLed" type="int" description="a port for sending led status"/>
+		</Outputs>
+	</Model>
+	<Model name="occupencyController" type="atomic" description="counts people entering and leaving a room, and returns if the total count is under the max occupancy">
+		<Inputs>
+			<Port name="SensorIn" type="int" description="a port for sensing people who come in"/>	
+			<Port name="SensorOut" type="int" description="a port for sensing people who leave"/>				
+		</Inputs>
+		<Outputs>
+			<Port name="OccupancySafe" type="int" description="a port for sending if occupancy is within range"/>
+		</Outputs>
+	</Model>
+	
+</Models>
