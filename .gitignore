@@ -1,2 +1,3 @@
 *.o
 COVID_supervisory_system_RT_Cadmium/BUILD/*
+COVID_supervisory_system_RT_Cadmium/mbed-os
