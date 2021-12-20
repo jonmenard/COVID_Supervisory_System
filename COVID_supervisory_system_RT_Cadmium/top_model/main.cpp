@@ -129,7 +129,6 @@ int main(int argc, char ** argv) {
     // Outputs
 
     AtomicModelPtr ledGreen = cadmium::dynamic::translate::make_dynamic_atomic_model<DigitalOutput, TIME>("ledGreen", D4);
-    AtomicModelPtr ledRed = cadmium::dynamic::translate::make_dynamic_atomic_model<DigitalOutput, TIME>("ledRed", D2);
 
 
     // 7 segment display for count people in room -- used to debug
